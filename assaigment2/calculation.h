@@ -9,31 +9,34 @@ class createArr
 {
 public:
     int midEle;
-    int eleArr[100] = {};
+    int eleArr[10000] = {};
 
     int crtArrEll();
+    void printArr();
     
 };
 
 int createArr::crtArrEll()
 {
-    cout << "func called";
+    //cout << "func called\n";
     srand(time(0));
 
-    for (int i = 0; i < 99; i++)
+    for (int i = 0; i < 9999; i++)
     {
-        eleArr[i] = (rand() % 100) + 1;
+        eleArr[i] = (rand() % 10000) +1;
     }
-
-    void printArr();
+    midEle = eleArr[5000];
+    void printArr();                        //Not work???
 
     return 0;
 }
 
-void printArr(int eleArr[])
+void createArr::printArr()
 {
-    for (int i = 0; i < 99; i++)
+    //cout << "func called 2\n";
+    for (int i = 0; i < 9999; i++)
     {
         cout << " " << eleArr[i] << " ";
     }
+    cout << endl;
 }
